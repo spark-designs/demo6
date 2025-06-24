@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Sterling | Minimalist Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #111827;
+        }
+        .hero-bg-minimalist {
+            background-image: linear-gradient(to top, rgba(255,255,255, 1) 20%, rgba(255,255,255, 0) 100%), url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2835&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-olive {
+            color: #556B2F; /* Dark Olive Green */
+        }
+        .btn-primary {
+            background-color: #111827;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            border-radius: 9999px;
+        }
+        .btn-primary:hover {
+            background-color: #374151;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #111827;
+            border: 1px solid #D1D5DB;
+            transition: all 0.3s ease;
+            border-radius: 9999px;
+        }
+        .btn-secondary:hover {
+            border-color: #111827;
+        }
+        nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #F3F4F6;
+        }
+        .swiper-pagination-bullet-active {
+            background: #556B2F !important;
+        }
+        .form-input {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            color: #111827;
+            border-radius: 0;
+        }
+        .form-input:focus {
+            border-color: #556B2F;
+            box-shadow: 0 0 0 2px rgba(85, 107, 47, 0.2);
+            outline: none;
+        }
+        .sold-card {
+            background-color: #F9FAFB;
+            transition: box-shadow 0.3s ease;
+        }
+        .sold-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        .section-bg {
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed w-full top-0 z-50">
+        <nav id="navbar" class="transition-all duration-300">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-24">
+                    <a href="#" class="text-xl font-semibold tracking-widest text-gray-800">J. STERLING</a>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium tracking-wider">
+                            <a href="#about" class="text-gray-500 hover:text-gray-900 transition-colors">ABOUT</a>
+                            <a href="#reviews" class="text-gray-500 hover:text-gray-900 transition-colors">REVIEWS</a>
+                            <a href="#sold" class="text-gray-500 hover:text-gray-900 transition-colors">SOLD</a>
+                            <a href="#contact" class="text-gray-500 hover:text-gray-900 transition-colors">CONTACT</a>
+                        </div>
+                    </div>
+                     <div class="md:hidden">
+                        <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
+                            <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
+                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900">ABOUT</a>
+                    <a href="#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900">REVIEWS</a>
+                    <a href="#sold" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900">SOLD</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-bg-minimalist min-h-screen flex flex-col justify-center items-center text-center pt-24">
+        <div class="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-4 text-gray-900">
+                Thoughtful Living,<br>Modernly Designed
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-500">
+                Jessica Sterling — Curating Houston's finest minimalist and modern homes.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                 <a href="mailto:jessica.sterling@houstonluxury.com" class="inline-flex items-center justify-center px-6 py-3 font-medium text-base btn-primary w-full sm:w-auto">
+                    <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Email Me
+                </a>
+                <a href="tel:1-713-555-1234" class="inline-flex items-center justify-center px-6 py-3 font-medium text-base btn-secondary w-full sm:w-auto">
+                    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" /></svg>
+                    Call Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
+             <div class="md:col-span-5" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=2789&auto=format&fit=crop" alt="Jessica Sterling" class="w-full h-auto object-cover">
+            </div>
+            <div class="md:col-span-7" data-aos="fade-left" data-aos-delay="100">
+                 <h2 class="text-3xl lg:text-4xl font-semibold mb-6 text-gray-900">A Passion for People, a<br> Dedication to <span class="accent-olive">Results</span></h2>
+                 <p class="text-gray-600 text-lg mb-6 leading-relaxed">With over 15 years serving the Houston luxury market, I've built my career on integrity, transparency, and unparalleled market knowledge. For me, real estate is more than transactions; it's about building lasting relationships and helping you find a place you're proud to call home.</p>
+                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">Whether a first-time homebuyer or a seasoned investor, I provide a seamless, personalized experience, guiding you through every step with expert advice and unwavering support.</p>
+                 <a href="#contact" class="inline-block px-8 py-3 font-medium btn-primary">Let's Work Together</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="reviews" class="py-24 sm:py-32 section-bg">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-semibold text-gray-900">Why Clients <span class="accent-olive">Trust Me</span></h2>
+            </div>
+            <div class="swiper-container testimonial-swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                     <!-- Slides -->
+                    <div class="swiper-slide p-2">
+                        <div class="bg-white p-8 h-full">
+                            <p class="text-lg text-gray-600 leading-relaxed">"Jessica was an absolute pleasure to work with. Her attention to detail and market knowledge were instrumental in finding our perfect home. We couldn't be happier!"</p>
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <p class="font-medium text-lg text-gray-900">The Johnson Family</p>
+                                <p class="text-gray-500">Homeowners in The Woodlands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-2">
+                        <div class="bg-white p-8 h-full">
+                            <p class="text-lg text-gray-600 leading-relaxed">"As first-time homebuyers, we were nervous. Jessica guided us through every step with patience and expertise. She turned a stressful process into an exciting journey!"</p>
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <p class="font-medium text-lg text-gray-900">Michael & Sarah Chen</p>
+                                <p class="text-gray-500">Owners in River Oaks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-2">
+                        <div class="bg-white p-8 h-full">
+                            <p class="text-lg text-gray-600 leading-relaxed">"Selling our home with Jessica was the best decision. She secured a top-dollar offer faster than we expected. Her negotiation skills are second to none."</p>
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <p class="font-medium text-lg text-gray-900">David Rodriguez</p>
+                                <p class="text-gray-500">Seller in Memorial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-12 relative"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sold" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-semibold text-gray-900">A Track Record of <span class="accent-olive">Success</span></h2>
+                <p class="mt-4 text-lg text-gray-500">Explore some of the stunning properties I've recently sold.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards -->
+                 <div class="overflow-hidden sold-card" data-aos="fade-up">
+                    <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop" alt="Luxury Home">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">The Woodlands Villa</h3>
+                        <p class="accent-olive mb-4 text-lg font-medium">Sold for $2,450,000</p>
+                        <div class="flex items-center text-gray-500 text-sm space-x-4">
+                            <span>4 Beds</span><span class="opacity-50">|</span><span>5 Baths</span><span class="opacity-50">|</span><span>4,800 sqft</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="overflow-hidden sold-card" data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2940&auto=format&fit=crop" alt="Modern House">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">River Oaks Estate</h3>
+                        <p class="accent-olive mb-4 text-lg font-medium">Sold for $3,100,000</p>
+                        <div class="flex items-center text-gray-500 text-sm space-x-4">
+                            <span>5 Beds</span><span class="opacity-50">|</span><span>6 Baths</span><span class="opacity-50">|</span><span>5,500 sqft</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="overflow-hidden sold-card" data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2940&auto=format&fit=crop" alt="Suburban Home">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Memorial Modern</h3>
+                        <p class="accent-olive mb-4 text-lg font-medium">Sold for $1,980,000</p>
+                        <div class="flex items-center text-gray-500 text-sm space-x-4">
+                            <span>4 Beds</span><span class="opacity-50">|</span><span>4 Baths</span><span class="opacity-50">|</span><span>4,200 sqft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 sm:py-32 section-bg">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                 <h2 class="text-3xl lg:text-4xl font-semibold mb-4 text-gray-900">Start Your <span class="accent-olive">Next Chapter</span></h2>
+                 <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">Reach out directly or fill out the form below. I'll personally get back to you within 24 hours.</p>
+            </div>
+             <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8 mb-12 text-gray-600" data-aos="fade-up">
+                <a href="mailto:jessica.sterling@houstonluxury.com" class="flex items-center text-lg hover:accent-olive transition-colors">
+                    <svg class="h-6 w-6 mr-3 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    jessica.sterling@houstonluxury.com
+                </a>
+                <a href="tel:1-713-555-1234" class="flex items-center text-lg hover:accent-olive transition-colors">
+                     <svg class="w-6 h-6 mr-3 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" /></svg>
+                    (713) 555-1234
+                </a>
+            </div>
+            <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <input type="text" name="name" required class="block w-full py-3 px-4 form-input" placeholder="Full Name">
+                        <input type="email" name="email" required class="block w-full py-3 px-4 form-input" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" class="block w-full py-3 px-4 form-input" placeholder="Phone Number (Optional)">
+                    </div>
+                    <div>
+                        <textarea name="message" rows="5" required class="block w-full py-3 px-4 form-input" placeholder="How can I help you achieve your real estate goals?"></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="inline-block w-full sm:w-auto px-12 py-4 font-medium btn-primary text-base">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-white text-gray-500 border-t border-gray-200">
+        <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                 <a href="#" class="text-xl font-semibold tracking-widest text-gray-800">J. STERLING</a>
+                 <p class="mt-2 text-gray-500">Houston's Premier Minimalist Real Estate Agent.</p>
+            </div>
+            <div class="flex justify-center space-x-8 mb-8 text-sm tracking-wider">
+                <a href="#about" class="hover:text-gray-900 transition-colors">ABOUT</a>
+                <a href="#reviews" class="hover:text-gray-900 transition-colors">REVIEWS</a>
+                <a href="#sold" class="hover:text-gray-900 transition-colors">SOLD</a>
+                <a href="#contact" class="hover:text-gray-900 transition-colors">CONTACT</a>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8 text-center text-xs">
+                <p>&copy; 2025 Jessica Sterling Real Estate. Designed with Passion.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 50 });
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function () {
+            if (window.pageYOffset > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        };
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        navLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: { 768: { slidesPerView: 2, spaceBetween: 20 } }
+        });
+    </script>
+</body>
+</html>
